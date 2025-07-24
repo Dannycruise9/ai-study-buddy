@@ -1,0 +1,55 @@
+/* frontend/src/Header.css */
+
+/* --- Mobile-First Styles (for screens < 768px) --- */
+.app-header-nav {
+  display: flex;
+  flex-direction: column; /* Stack items vertically on mobile */
+  align-items: flex-start; /* Align to the left for a clean look */
+  gap: 1rem;               /* Space between the title and user info */
+  padding: 1rem;
+  background-color: #20232a;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header-title h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.header-user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%; /* Make user info take full width */
+  justify-content: space-between; /* Space out email and logout button */
+}
+
+.logout-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.logout-button:hover {
+  background-color: #cc0000;
+}
+
+/* --- Tablet & Desktop Styles (for screens >= 768px) --- */
+@media (min-width: 768px) {
+  .app-header-nav {
+    flex-direction: row; /* Switch to horizontal layout */
+    justify-content: space-between; /* Space out title and user info */
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  .header-user-info {
+    width: auto; /* Allow the user info to size to its content */
+  }
+}

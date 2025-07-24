@@ -1,0 +1,145 @@
+/* frontend/src/Auth.css */
+.auth-container {
+  max-width: 400px;
+  margin: 4rem auto;
+  padding: 2rem;
+  border: 1px solid #444;
+  border-radius: 10px;
+  background-color: #333842;
+}
+.auth-description {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+.auth-form input {
+  display: block;
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #555;
+  background-color: #282c34;
+  color: white;
+}
+.toggle-auth {
+  background: none;
+  border: none;
+  color: #61dafb;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.auth-message {
+  color: #ff6b6b;
+  margin-top: 1rem;
+}
+/* Add this to frontend/src/Auth.css */
+
+.google-signin-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  background-color: #4285F4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.google-signin-button:hover:not(:disabled) {
+  background-color: #357ae8;
+}
+
+.google-icon {
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem 0;
+  color: #888;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #444;
+}
+
+
+.divider:not(:empty)::before {
+  margin-right: .5em;
+}
+
+.divider:not(:empty)::after {
+  margin-left: .5em;
+}
+
+/* Add this to frontend/src/Auth.css */
+
+.google-signin-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  background-color: #4285F4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.google-signin-button:hover:not(:disabled) {
+  background-color: #357ae8;
+}
+
+.google-icon {
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem 0;
+  color: #888;
+}
+
+
+.divider:not(:empty)::before {
+  margin-right: .5em;
+}
+
+.divider:not(:empty)::after {
+  margin-left: .5em;
+}
+/* --- Responsive Styles --- */
+@media (max-width: 480px) {
+  .auth-container {
+    /* Remove border and padding to make it blend with the page */
+    border: none;
+    padding: 1rem 0;
+    background-color: transparent;
+  }
+}

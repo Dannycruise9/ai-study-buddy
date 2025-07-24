@@ -1,0 +1,88 @@
+/* frontend/src/MockTest.css */
+.mock-test-container {
+  width: 100%;
+  max-width: 800px;
+  background-color: #2f343d;
+  padding: 1rem; /* Start with mobile-friendly padding */
+  border-radius: 8px;
+  margin-top: 2rem;
+  box-sizing: border-box;
+}
+
+.question-block {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.question-text {
+  font-size: 1rem; /* Mobile-first font size */
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.option {
+  display: flex; /* Use flexbox for better alignment */
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+  font-size: 0.9rem; /* Mobile-first font size for options */
+}
+
+.option input[type="radio"] {
+  flex-shrink: 0; /* Prevent radio button from shrinking */
+}
+
+.option.selected {
+  border-color: #61dafb;
+  background-color: #3a404a;
+}
+
+.option.correct {
+  background-color: #2f9e44;
+  border-color: #2b8a3e;
+  color: white;
+}
+
+.option.incorrect {
+  background-color: #e03131;
+  border-color: #c92a2a;
+  color: white;
+}
+
+.submit-test-button {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 12px 25px;
+}
+
+.score-container {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #20232a;
+  border-radius: 8px;
+}
+
+/* --- RESPONSIVE STYLES for larger screens --- */
+@media (min-width: 768px) {
+  .mock-test-container {
+    padding: 2rem; /* Increase padding for tablets and desktops */
+  }
+
+  .question-text {
+    font-size: 1.1rem; /* Increase font size for better readability */
+  }
+
+  .option {
+    font-size: 1rem; /* Increase option font size */
+  }
+}

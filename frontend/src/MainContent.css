@@ -1,0 +1,70 @@
+/* frontend/src/MainContent.css */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.upload-section, .actions-section {
+  width: 100%;
+  max-width: 800px;
+  border: 2px dashed #444;
+  padding: 1.5rem; /* Mobile-friendly padding */
+  border-radius: 10px;
+  background-color: #2f343d;
+  box-sizing: border-box;
+}
+
+.actions-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.actions-section h2, .upload-section h2 {
+  margin-top: 0;
+}
+
+.action-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mock-test-controls {
+  display: flex;
+  flex-direction: column; /* Start with a vertical layout for mobile */
+  align-items: stretch;
+  gap: 1rem;
+  background-color: #282c34;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 550px;
+  box-sizing: border-box;
+}
+
+.mock-test-controls label {
+  text-align: center;
+}
+
+/* --- RESPONSIVE STYLES for larger screens --- */
+@media (min-width: 600px) {
+  .upload-section, .actions-section {
+    padding: 2rem;
+  }
+  
+  /* Switch to horizontal layout for mock test controls on wider screens */
+  .mock-test-controls {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mock-test-controls label {
+    text-align: left;
+  }
+}
