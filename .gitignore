@@ -1,0 +1,21 @@
+# backend/.gitignore (This is a single file in the root directory)
+
+# Python
+/backend/venv/
+__pycache__/
+*.pyc
+
+# Frontend
+/frontend/node_modules/
+/frontend/build/
+.pnp
+.pnp.js
+
+# Environment variables - VERY IMPORTANT FOR SECURITY
+# This will ignore .env files in ANY folder
+.env
+.env.*
+
+# IDE and OS files
+.vscode/
+.DS_Store
