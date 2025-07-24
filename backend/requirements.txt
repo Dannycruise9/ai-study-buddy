@@ -6,3 +6,4 @@ PyMuPDF
 google-generativeai
 supabase
 groq
+gunicorn
