@@ -16,6 +16,7 @@ load_dotenv()
 
 # --- Initialize Flask App and CORS ---
 app = Flask(__name__)
+# Explicitly allow your React app's origin for local development
 cors = CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 
 # --- Initialize ALL Clients (Supabase, Gemini, Groq) ---

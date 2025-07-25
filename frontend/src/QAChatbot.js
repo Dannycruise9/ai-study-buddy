@@ -1,4 +1,4 @@
-// frontend/src/QAChatbot.js
+
 import React, { useState } from 'react';
 import './QAChatbot.css';
 
@@ -11,11 +11,14 @@ const QAChatbot = ({ documentId, session }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!question.trim()) return;
+
     setIsLoading(true);
     setAnswer('');
     setError('');
+
     try {
-      const response = await fetch(`http://localhost:5000/ask-question/${documentId}`, {
+      // --- UPDATED FETCH URL ---
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/ask-question/${documentId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -23,8 +26,11 @@ const QAChatbot = ({ documentId, session }) => {
         },
         body: JSON.stringify({ question }),
       });
+
       const data = await response.json();
-      if (!response.ok) throw new Error(data.error || 'Something went wrong');
+      if (!response.ok) {
+        throw new Error(data.error || 'Something went wrong');
+      }
       setAnswer(data.answer);
     } catch (err) {
       setError(err.message);
